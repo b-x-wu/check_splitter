@@ -38,3 +38,7 @@ interface Check {
 - `200 OK`  - `Diner[]` where the `owes` field is necessarily filled.
 - `400 Malformed Request`
 - The responses follow the JSend schema.
+
+## References
+
+[Create React App without Create React App](https://blog.bitsrc.io/create-react-app-without-create-react-app-b0a5806a92)
