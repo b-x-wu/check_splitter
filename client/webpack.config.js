@@ -1,19 +1,25 @@
 const path = require("path")
-
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports={
     mode: process.env.NODE_ENV ?? "development", 
     entry: "./index.js", 
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'React App',
+            template: 'public/index.html'
+        })
+    ],
     output: {
-        path: path.resolve(__dirname, "public"),
+        path: path.resolve(__dirname, "dist"),
         filename: "main.js"
     },
     target: "web",
     devServer: {
         port: process.env.PORT ?? "3001",
-        static: ["./public"],
+        static: ["./dist"],
         open: true,
-        hot: true,
+        hot: true
     },
     resolve: {
         extensions: ['.js','.jsx','.json'] 
@@ -23,7 +29,7 @@ module.exports={
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use:  'babel-loader',
+                use:  'babel-loader'
             }
         ]
     }

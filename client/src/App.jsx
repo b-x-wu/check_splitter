@@ -3,7 +3,7 @@ import React from 'react'
 const App = () => {
     return (
         <>
-            This is a React App.
+            This is a React App!
         </>
     )
 }

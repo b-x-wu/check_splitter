@@ -1,6 +1,6 @@
 import React from 'react'
-import reactDom from 'react-dom'
-// TODO: can this just be { ReactDOM } from 'react'?
+import { createRoot } from 'react-dom/client'
 import App from './src/App'
 
-reactDom.render(<App />, document.getElementById('root'))
+const root = createRoot(document.getElementById('root'))
+root.render(<App />)
