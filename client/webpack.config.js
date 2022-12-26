@@ -1,12 +1,11 @@
 const path = require("path")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports={
+module.exports = {
     mode: process.env.NODE_ENV ?? "development", 
-    entry: "./index.js", 
+    entry: "./src/index.js", 
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'React App',
             template: 'public/index.html'
         })
     ],
